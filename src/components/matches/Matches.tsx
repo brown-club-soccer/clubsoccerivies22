@@ -18,8 +18,8 @@ export const fixtures: IGameProps[] = [
         teamB: Team.Brown,
         kickOff: new Date('2022-04-23T14:00:00'),
         location: Location.MK,
-        scoreA: undefined,
-        scoreB: undefined,
+        scoreA: 0,
+        scoreB: 2,
         group: Group.A
     },
     {
@@ -27,8 +27,8 @@ export const fixtures: IGameProps[] = [
         teamB: Team.Cornell,
         kickOff: new Date('2022-04-23T15:30:00'),
         location: Location.MK,
-        scoreA: undefined,
-        scoreB: undefined,
+        scoreA: 3,
+        scoreB: 1,
         group: Group.A
     },
     {
@@ -127,6 +127,8 @@ export const Matches = () => {
     })
 
     return <div className='matches-container'>
-        {games}
+        <div className='fixtures'>
+            {games}
+        </div>
     </div>
 }

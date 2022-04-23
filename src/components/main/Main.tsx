@@ -20,8 +20,10 @@ export const Main = () => {
                 return <Matches/>
             case ContentType.Standings:
                 return <div className='standings-container'>
-                    <GroupTable group={Group.A}/>
-                    <GroupTable group={Group.B}/>
+                    <div className='standings-content'>
+                        <GroupTable group={Group.A}/>
+                        <GroupTable group={Group.B}/>
+                    </div>
                 </div>
             case ContentType.Stats:
                 return <div></div>
@@ -42,9 +44,9 @@ export const Main = () => {
                     <div className={`tab ${activeContent === ContentType.Standings}`} onClick={() => setActiveContent(ContentType.Standings)}>
                         Standings
                     </div>
-                    <div className={`tab ${activeContent === ContentType.Stats}`} onClick={() => setActiveContent(ContentType.Stats)}>
+                    {/* <div className={`tab ${activeContent === ContentType.Stats}`} onClick={() => setActiveContent(ContentType.Stats)}>
                         Stats
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <div className="content">

@@ -1,8 +1,15 @@
 .matches-container {
-    padding-top: 20px;
-    height: 100%;
     overflow: scroll;
+    height: 100%;
+    position: relative;  
+}
+
+.fixtures {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    padding-top: 20px;
+    padding-bottom: 200px;
     gap: 10px;
 }

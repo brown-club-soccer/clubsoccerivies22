@@ -12,14 +12,14 @@ export const GroupTable = (props: IGroupTableProps) => {
     const rows: JSX.Element[] = []
     if (props.group === Group.A) {
         rows.push(<TableRow team={Team.Brown}/>)
-        rows.push(<TableRow team={Team.Columbia}/>)
+        rows.push(<TableRow team={Team.Dartmouth}/>)
         rows.push(<TableRow team={Team.Cornell}/>)
         rows.push(<TableRow team={Team.Penn}/>)
     } else {
+        rows.push(<TableRow team={Team.Harvard}/>)
         rows.push(<TableRow team={Team.Yale}/>)
         rows.push(<TableRow team={Team.Princeton}/>)
-        rows.push(<TableRow team={Team.Harvard}/>)
-        rows.push(<TableRow team={Team.Dartmouth}/>)
+        rows.push(<TableRow team={Team.Columbia}/>)
     }
 
     return (<div className='table-container'>

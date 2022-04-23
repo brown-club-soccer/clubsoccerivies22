@@ -39,6 +39,9 @@ export const Game = (props: IGameProps) => {
     const day = kickOff.getDate()
     const year = kickOff.getFullYear()
     const month = 'February'
+    console.log(teamA, teamB)
+    console.log(scoreA, scoreB)
+    const gameFinished:boolean = (scoreA !== undefined && scoreB !== undefined)
     return <div className='game-container'>
         <div className='info'>
             <div className='location'>
@@ -55,7 +58,7 @@ export const Game = (props: IGameProps) => {
                 {teamA}
             </div>
             <div className='vs'>
-                {scoreA && scoreB ? 
+                {gameFinished ? 
                 <div className='score-container'>
                     <div className='score-num'>{scoreA}</div> 
                     -

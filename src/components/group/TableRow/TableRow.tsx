@@ -18,32 +18,37 @@ export const TableRow = (props: IRowProps) => {
     let gc = 0
     for (let i = 0; i < fixtures.length; i++) {
         const match = fixtures[i]
-        if (!(match.scoreA && match.scoreB)) continue
+        const gameFinished:boolean = (match.scoreA !== undefined && match.scoreB !== undefined)
+        if (!gameFinished) continue
         if (match.teamA === team){
             gp ++;
-            gs += match.scoreA
-            gc += match.scoreB
-            if (match.scoreA > match.scoreB) {
-                wins ++
-                points += 3
-            } else if (match.scoreA === match.scoreB) {
-                draws ++
-                points += 1
-            } else {
-                losses ++
+            if(match.scoreA) gs += match.scoreA
+            if(match.scoreB) gc += match.scoreB
+            if (match.scoreA && match.scoreB) {
+                if (match.scoreA > match.scoreB) {
+                    wins ++
+                    points += 3
+                } else if (match.scoreA === match.scoreB) {
+                    draws ++
+                    points += 1
+                } else {
+                    losses ++
+                }
             }
         } else if (match.teamB === team) {
             gp ++;
-            gs += match.scoreA
-            gc += match.scoreB
-            if (match.scoreB > match.scoreA) {
-                wins ++
-                points += 3
-            } else if (match.scoreA === match.scoreB) {
-                draws ++
-                points += 1
-            } else {
-                losses ++
+            if(match.scoreB) gs += match.scoreB
+            if(match.scoreA) gc += match.scoreA
+            if (match.scoreA && match.scoreB) {
+                if (match.scoreB > match.scoreA) {
+                    wins ++
+                    points += 3
+                } else if (match.scoreA === match.scoreB) {
+                    draws ++
+                    points += 1
+                } else {
+                    losses ++
+                }
             }
         }
     }
