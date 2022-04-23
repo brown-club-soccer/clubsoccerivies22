@@ -32,8 +32,8 @@ export const Main = () => {
         <div className="container">
             <div className="header">
                 <div className="title">
-                    {/* <div>Men's Club Soccer</div> */}
-                    <div>Ivy League Spring Tournament 2022</div> 
+                    <div className="h1">Men's Club Soccer</div>
+                    <div className="h2">Ivy League Spring Tournament 2022</div> 
                 </div>
                 <div className="tabs">
                     <div className={`tab ${activeContent === ContentType.Matches}`} onClick={() => setActiveContent(ContentType.Matches)}>

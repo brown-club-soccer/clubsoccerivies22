@@ -8,7 +8,25 @@
     grid-template-rows: 1fr; 
 }
 
+.tableRow-container.true {
+    border-bottom: solid 0.5px #ffee3a;
+}
+
 .icon {
     width: 20px;
     height: 20px;
+}
+
+.l {
+    align-items: flex-start;
+    display: flex;
+}
+
+@media only screen and (max-width: 1000px) {
+    .tableRow-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr !important; 
+    }
+    .do {
+        display: none !important;
+    }
 }

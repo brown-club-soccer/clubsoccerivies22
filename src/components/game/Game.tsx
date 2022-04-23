@@ -44,6 +44,7 @@ export const Game = (props: IGameProps) => {
             <div className='location'>
                 {location}
             </div>
+            •
             <div className='group'>
                 {group}
             </div>
@@ -62,7 +63,7 @@ export const Game = (props: IGameProps) => {
                 </div> 
                 : 
                 <div className='time'>
-                    <div>
+                    <div className='date'>
                         {day + ' ' + month + ' ' + year}
                     </div>
                     {'KO ' + kickOff.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' })}

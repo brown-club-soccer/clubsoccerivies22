@@ -9,8 +9,8 @@ export const fixtures: IGameProps[] = [
         teamB: Team.Brown,
         kickOff: new Date('2022-04-23T11:00:00'),
         location: Location.MK,
-        scoreA: 1,
-        scoreB: 4,
+        scoreA: undefined,
+        scoreB: undefined,
         group: Group.A
     },
     {

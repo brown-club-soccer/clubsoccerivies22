@@ -8,6 +8,7 @@
   align-items: flex-start;
   background-color: #1b1b27;
   user-select: none;
+  font-family: 'Roboto', sans-serif;
 }
 
 ::-webkit-scrollbar {

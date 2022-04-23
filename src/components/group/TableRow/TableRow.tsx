@@ -52,14 +52,14 @@ export const TableRow = (props: IRowProps) => {
     return (
         <div className="tableRow-container">
             <img className='icon' alt='img' src={team + '.png'}/>
-            <div>{team}</div>
+            <div className='l'>{team}</div>
             <div>{gp}</div>
             <div>{wins}</div>
             <div>{draws}</div>
             <div>{losses}</div>
-            <div>{gs}</div>
-            <div>{gc}</div>
-            <div>{gs - gc}</div>
+            <div className='do'>{gs}</div>
+            <div className='do'>{gc}</div>
+            <div className='do'>{gs - gc}</div>
             <div>{points}</div>
         </div>
     )

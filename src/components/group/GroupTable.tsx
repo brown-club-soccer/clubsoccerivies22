@@ -23,16 +23,17 @@ export const GroupTable = (props: IGroupTableProps) => {
     }
 
     return (<div className='table-container'>
+        <div className='group-header'>{props.group}</div>
         <div className='table-headers'>
-            <div>Club</div>
+            <div className='l'>Club</div>
             <div></div>
             <div>MP</div>
             <div>W</div>
             <div>D</div>
             <div>L</div>
-            <div>GF</div>
-            <div>GA</div>
-            <div>GD</div>
+            <div className='do'>GF</div>
+            <div className='do'>GA</div>
+            <div className='do'>GD</div>
             <div>Pts</div>
         </div>
         {rows}

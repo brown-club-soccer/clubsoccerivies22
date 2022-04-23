@@ -2,7 +2,8 @@
   width: 100%;
   height: 100%; 
   overflow: hidden;
-  border: solid 2px #df1e4d;
+  outline-offset: -4px;
+  outline: solid 4px #df1e4d;
   background-color: #1b1b27;
   flex-direction: column;
   display: flex;
@@ -34,6 +35,14 @@
   height: 60%;
 }
 
+.h1 {
+  font-weight: 300;
+}
+
+.h2 {
+  font-weight: 600;
+}
+
 .tabs {
   display: flex;
   flex-direction: row;
@@ -44,6 +53,9 @@
 }
 
 @media only screen and (max-width: 1000px) {
+  .h1 {
+    display: none !important;
+  }
   .tabs {
     width: 100vw !important;
   }
@@ -73,7 +85,7 @@
 
 .tab.true {
   transform: translate(0px, 1.5px);
-  border-bottom: white solid 3px;
+  border-bottom: #ffee3a solid 3px;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
