@@ -1,0 +1,8 @@
+.matches-container {
+    padding-top: 20px;
+    height: 100%;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
