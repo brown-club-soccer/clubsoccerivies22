@@ -36,8 +36,8 @@ export const fixtures: IGameProps[] = [
         teamB: Team.Penn,
         kickOff: new Date('2022-04-23T18:30:00'),
         location: Location.MK,
-        scoreA: undefined,
-        scoreB: undefined,
+        scoreA: 3,
+        scoreB: 0,
         group: Group.A
     },
     {
@@ -45,8 +45,8 @@ export const fixtures: IGameProps[] = [
         teamB: Team.Dartmouth,
         kickOff: new Date('2022-04-24T08:00:00'),
         location: Location.MK,
-        scoreA: undefined,
-        scoreB: undefined,
+        scoreA: 0,
+        scoreB: 0,
         group: Group.A
     },
     {
@@ -54,8 +54,8 @@ export const fixtures: IGameProps[] = [
         teamB: Team.Cornell,
         kickOff: new Date('2022-04-24T11:00:00'),
         location: Location.MK,
-        scoreA: undefined,
-        scoreB: undefined,
+        scoreA: 1,
+        scoreB: 0,
         group: Group.A
     },
     {
@@ -72,8 +72,8 @@ export const fixtures: IGameProps[] = [
         teamB: Team.Yale,
         kickOff: new Date('2022-04-23T12:30:00'),
         location: Location.MK,
-        scoreA: undefined,
-        scoreB: undefined,
+        scoreA: 1,
+        scoreB: 3,
         group: Group.B
     },
     {
@@ -81,8 +81,8 @@ export const fixtures: IGameProps[] = [
         teamB: Team.Harvard,
         kickOff: new Date('2022-04-23T14:00:00'),
         location: Location.BFFw,
-        scoreA: undefined,
-        scoreB: undefined,
+        scoreA: 0,
+        scoreB: 4,
         group: Group.B
     },
     {
@@ -90,8 +90,8 @@ export const fixtures: IGameProps[] = [
         teamB: Team.Yale,
         kickOff: new Date('2022-04-23T17:00:00'),
         location: Location.MK,
-        scoreA: undefined,
-        scoreB: undefined,
+        scoreA: 0,
+        scoreB: 0,
         group: Group.B
     },
     {
@@ -99,8 +99,8 @@ export const fixtures: IGameProps[] = [
         teamB: Team.Harvard,
         kickOff: new Date('2022-04-23T17:00:00'),
         location: Location.MK,
-        scoreA: undefined,
-        scoreB: undefined,
+        scoreA: 1,
+        scoreB: 2,
         group: Group.B
     },
     {
@@ -108,6 +108,38 @@ export const fixtures: IGameProps[] = [
         teamB: Team.Columbia,
         kickOff: new Date('2022-04-24T09:30:00'),
         location: Location.MK,
+        scoreA: 6,
+        scoreB: 0,
+        group: Group.B
+    },
+    {
+        teamA: Team.Harvard,
+        teamB: Team.Brown,
+        kickOff: new Date('2022-04-24T13:00:00'),
+        location: Location.MK,
+        title: 'Semi Final 1',
+        scoreA: 2,
+        scoreB: 2,
+        pens: 'Brown win 4-2 in penalties',
+        group: Group.B
+    },
+    {
+        teamA: Team.Dartmouth,
+        teamB: Team.Princeton,
+        kickOff: new Date('2022-04-24T14:30:00'),
+        location: Location.MK,
+        title: 'Semi Final 2',
+        isLive: true,
+        scoreA: 0,
+        scoreB: 0,
+        group: Group.B
+    },
+    {
+        teamA: Team.Brown,
+        teamB: 'Winner SF2 ',
+        kickOff: new Date('2022-04-24T17:00:00'),
+        location: Location.MK,
+        title: 'Final',
         scoreA: undefined,
         scoreB: undefined,
         group: Group.B

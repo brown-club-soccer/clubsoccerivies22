@@ -19,45 +19,46 @@ export const TableRow = (props: IRowProps) => {
     for (let i = 0; i < fixtures.length; i++) {
         const match = fixtures[i]
         const gameFinished:boolean = (match.scoreA !== undefined && match.scoreB !== undefined)
-        if (!gameFinished) continue
+        if (!gameFinished || match.title) continue
+        if (match.scoreA !== undefined && match.scoreB !== undefined){
         if (match.teamA === team){
+            console.log(team)
             gp ++;
-            if(match.scoreA) gs += match.scoreA
-            if(match.scoreB) gc += match.scoreB
-            if (match.scoreA && match.scoreB) {
-                if (match.scoreA > match.scoreB) {
-                    wins ++
-                    points += 3
-                } else if (match.scoreA === match.scoreB) {
-                    draws ++
-                    points += 1
-                } else {
-                    losses ++
-                }
+            gs += match.scoreA
+            gc += match.scoreB
+            if (match.scoreA > match.scoreB) {
+                wins ++
+                points += 3
+            } else if (match.scoreA === match.scoreB) {
+                draws ++
+                points += 1
+            } else {
+                losses ++
             }
-        } else if (match.teamB === team) {
+        } 
+        if (match.teamB === team) {
             gp ++;
-            if(match.scoreB) gs += match.scoreB
-            if(match.scoreA) gc += match.scoreA
-            if (match.scoreA && match.scoreB) {
-                if (match.scoreB > match.scoreA) {
-                    wins ++
-                    points += 3
-                } else if (match.scoreA === match.scoreB) {
-                    draws ++
-                    points += 1
-                } else {
-                    losses ++
-                }
+            gs += match.scoreB
+            gc += match.scoreA
+            if (match.scoreB > match.scoreA) {
+                wins ++
+                points += 3
+            } else if (match.scoreA === match.scoreB) {
+                draws ++
+                points += 1
+            } else {
+                losses ++
             }
         }
+        }
+        
     }
 
 
     return (
         <div className="tableRow-container">
-            <img className='icon' alt='img' src={team + '.png'}/>
-            <div className='l'>{team}</div>
+            <img className='icon' alt='img' src={'./' + team.toLocaleLowerCase() + '.png'}/>
+            <div className='do-l'>{team}</div>
             <div>{gp}</div>
             <div>{wins}</div>
             <div>{draws}</div>
